@@ -1,0 +1,403 @@
+@charset "utf-8";
+/*font-family: 'Noto Sans KR', sans-serif;*/
+
+/*기본설정*/
+:root {
+  --font-normal-size: 16px;
+  --font-text-size: 14px;
+  --font-tit-size: 24px;
+  --kakao-color: #f7d600;
+}
+
+/*reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+h2 {
+  display: none;
+  text-indent: -9999px;
+  z-index: -9999;
+  visibility: hidden;
+  overflow: hidden;
+}
+body {
+  min-width: 1440px;
+  width: 100%;
+}
+.wrap_cont {
+  width: 1440px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*a효과*/
+a:link {
+  color: #fff;
+}
+a:visited {
+  color: #fff;
+}
+a:hover {
+  color: var(--kakao-color);
+}
+a:active {
+  color: #fff;
+}
+
+/*공통 폰트&언더라인*/
+h3 {
+  font-size: var(--font-tit-size);
+  font-weight: bold;
+  color: #000;
+  margin-top: 100px;
+}
+.sub_text {
+  font-size: var(--font-text-size);
+  color: #969696;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+.cont_tit {
+  font-size: var(--font-tit-size);
+  color: #fff;
+  font-weight: bold;
+}
+.cont_text {
+  font-size: var(--font-text-size);
+  line-height: 1.6;
+  color: #fff;
+}
+.under {
+  background: var(--kakao-color);
+  width: 80px;
+  height: 8px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+/*헤더*/
+header {
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+header .wrap_cont {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #fff;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gnb {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.gnb li a {
+  display: block;
+  padding: 0 40px;
+  font-weight: bold;
+  line-height: 43px;
+}
+.util {
+  padding-left: 140px;
+}
+.util li img {
+  line-height: 43px;
+}
+
+/*메인 배너 영역*/
+#mainbnr_sec {
+  width: 100%;
+  height: 800px;
+  background: url("../images/main.jpg") no-repeat center top / cover;
+  position: relative;
+}
+#mainbnr_sec p {
+  font-weight: bold;
+  font-size: var(--font-tit-size);
+  color: white;
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  margin-left: -260px;
+  animation: wetext 1s 0.1s ease forwards normal;
+}
+@keyframes wetext {
+  0% {
+    position: absolute;
+    top: 50%;
+    opacity: 0%;
+  }
+  100% {
+    position: absolute;
+    top: 44%;
+    opacity: 100%;
+  }
+}
+
+/*INVESTMENT 영역*/
+#investiment_sec ul {
+  display: flex;
+  margin: 60px auto 0;
+  justify-content: center;
+}
+#investiment_sec ul li {
+  margin-right: 90px;
+}
+#investiment_sec ul li:last-child {
+  margin-right: 0px;
+}
+#investiment_sec ul li p {
+  font-weight: bold;
+  font-size: var(--font-normal-size);
+  color: #666;
+  margin-top: 20px;
+}
+
+/*PRESS 영역*/
+#press_sec ul {
+  display: flex;
+  margin-top: 60px;
+  justify-content: space-between;
+}
+#press_sec ul li {
+  width: 340px;
+  height: 676px;
+  position: relative;
+  overflow: hidden;
+}
+#press_sec ul li .cont_tit {
+  position: absolute;
+  left: 20px;
+  top: 365px;
+  text-align: left;
+  pointer-events: none;
+}
+.press_under {
+  background: #f5ca00;
+  width: 80px;
+  height: 5px;
+}
+#press_sec ul li .press_under {
+  position: absolute;
+  left: 22px;
+  top: 500px;
+  pointer-events: none;
+}
+#press_sec ul li .cont_text {
+  position: absolute;
+  left: 22px;
+  top: 520px;
+  text-align: left;
+  pointer-events: none;
+}
+#press_sec ul li p:last-child {
+  position: absolute;
+  right: 22px;
+  top: 625px;
+  text-align: right;
+}
+#press_sec ul li .imgbox img {
+  width: 100%;
+}
+/**/
+#press_sec img:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease-out 0.1s;
+}
+
+/*배너 영역*/
+#bnr_sec {
+  background: url("../images/main2.jpg") no-repeat center top / cover;
+  width: 100%;
+  overflow: hidden;
+  height: 765px;
+  margin-top: 100px;
+}
+#bnr_sec {
+  text-align: center;
+}
+
+/*KAKAO VENTURES STORY 영역*/
+#ventures_sec .top_ventures {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+#ventures_sec .top_ventures li:nth-child(1) {
+  background: url("../images/story1.png") no-repeat center/cover;
+  width: 350px;
+  height: 700px;
+}
+#ventures_sec .top_ventures li:nth-child(2) {
+  background: url("../images/story2.jpg") no-repeat center/cover;
+  width: 680px;
+  height: 700px;
+}
+#ventures_sec .top_ventures li:nth-child(3) {
+  background: url("../images/story3.png") no-repeat center/cover;
+  width: 350px;
+  height: 700px;
+}
+.bottom_ventures {
+  margin-top: 10px;
+}
+#ventures_sec .bottom_ventures li {
+  height: 340px;
+  background: url("../images/story4.jpg") no-repeat center/cover;
+}
+/**/
+#ventures_sec ul li {
+  position: relative;
+}
+#ventures_sec ul li p {
+  text-align: left;
+  position: absolute;
+}
+.top_ventures .cont_tit {
+  top: 22px;
+  left: 22px;
+}
+.top_ventures .cont_text {
+  left: 22px;
+  top: 100px;
+}
+.top_ventures .cont_text:last-child {
+  left: 22px;
+  top: 140px;
+}
+.bottom_ventures .cont_tit {
+  top: 22px;
+  left: 22px;
+}
+.bottom_ventures .cont_text {
+  left: 22px;
+  top: 70px;
+}
+.bottom_ventures .cont_text:last-child {
+  left: 22px;
+  top: 110px;
+}
+.top_ventures li:nth-child(1) .cont_tit,
+.top_ventures li:nth-child(3) .cont_tit {
+  top: 480px;
+  left: 22px;
+}
+.top_ventures li:nth-child(1) .cont_text,
+.top_ventures li:nth-child(3) .cont_text {
+  top: 560px;
+  left: 22px;
+}
+.top_ventures li:nth-child(1) .cont_text:last-child,
+.top_ventures li:nth-child(3) .cont_text:last-child {
+  top: 600px;
+  left: 22px;
+}
+
+/*Family 영역*/
+#family_sec ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+#family_sec ul li {
+  width: 350px; /*25%*/
+  height: 350px;
+  border: 1px solid #dfdfdf;
+  /* margin:-1px -1px 0 0; */ /*??????????????????????????*/
+}
+#family_sec ul li:hover {
+  border-color: #000;
+}
+#family_sec ul li {
+  line-height: 350px;
+}
+#family_sec ul li img {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/*Contsct Us 영역*/
+#contact_sec .btn {
+  border: 1px solid #dfdfdf;
+  width: 264px;
+  height: 40px;
+  line-height: 40px;
+}
+#contact_sec .btn:hover {
+  background: var(--kakao-color);
+  border-color: var(--kakao-color);
+  cursor: pointer;
+}
+#contact_sec .btn:hover a {
+  color: #000;
+}
+#contact_sec .btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+#contact_sec .btn a {
+  font-size: var(--font-text-size);
+  color: #666;
+  font-weight: bold;
+}
+#contact_sec .btn:first-child {
+  margin-right: 10px;
+}
+
+/*푸터 영역*/
+footer {
+  margin-top: 100px;
+  width: 100%;
+  background: #6e6e6e;
+  padding: 30px 0px;
+}
+footer::after {
+  content: "";
+  display: block;
+  clear: both;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+footer address {
+  color: #fff;
+  font-style: normal;
+  line-height: 2;
+  font-size: var(--font-text-size);
+  text-align: left;
+}
+footer ul {
+  float: right;
+  display: flex;
+  margin-top: 1px;
+}
+footer ul li {
+  margin-left: 10px;
+}
+footer ul li img {
+  line-height: 55px;
+  vertical-align: bottom;
+}
+footer ul li a {
+  height: 55px;
+}
